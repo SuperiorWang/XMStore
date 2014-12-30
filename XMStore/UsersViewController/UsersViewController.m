@@ -10,4 +10,9 @@
 
 @implementation UsersViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tableView.rowHeight = 44.0f;
+}
 @end

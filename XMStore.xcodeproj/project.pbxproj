@@ -10,6 +10,10 @@
 		161C5EB71A5136FC0095679B /* FindBackPsdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5EB61A5136FC0095679B /* FindBackPsdController.m */; };
 		161C5EBB1A513C030095679B /* XMMailController.h in Headers */ = {isa = PBXBuildFile; fileRef = 161C5EB91A513C030095679B /* XMMailController.h */; };
 		161C5EBC1A513C030095679B /* XMMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5EBA1A513C030095679B /* XMMailController.m */; };
+		161C5ECB1A5288DF0095679B /* XMOrdersViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 161C5EC91A5288DF0095679B /* XMOrdersViewController.h */; };
+		161C5ECC1A5288DF0095679B /* XMOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5ECA1A5288DF0095679B /* XMOrdersViewController.m */; };
+		161C5ED01A5289000095679B /* XMOrdersCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 161C5ECE1A5289000095679B /* XMOrdersCell.h */; };
+		161C5ED11A5289000095679B /* XMOrdersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5ECF1A5289000095679B /* XMOrdersCell.m */; };
 		166142411A48F98000278F8C /* XMUsersTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1661423F1A48F98000278F8C /* XMUsersTableView.h */; };
 		166142421A48F98000278F8C /* XMUsersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 166142401A48F98000278F8C /* XMUsersTableView.m */; };
 		1661424B1A496BDA00278F8C /* XMUsersTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 166142491A496BDA00278F8C /* XMUsersTableViewController.h */; };
@@ -119,6 +123,10 @@
 		161C5EB61A5136FC0095679B /* FindBackPsdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindBackPsdController.m; sourceTree = "<group>"; };
 		161C5EB91A513C030095679B /* XMMailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMailController.h; sourceTree = "<group>"; };
 		161C5EBA1A513C030095679B /* XMMailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMailController.m; sourceTree = "<group>"; };
+		161C5EC91A5288DF0095679B /* XMOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMOrdersViewController.h; sourceTree = "<group>"; };
+		161C5ECA1A5288DF0095679B /* XMOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMOrdersViewController.m; sourceTree = "<group>"; };
+		161C5ECE1A5289000095679B /* XMOrdersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMOrdersCell.h; sourceTree = "<group>"; };
+		161C5ECF1A5289000095679B /* XMOrdersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMOrdersCell.m; sourceTree = "<group>"; };
 		1661423F1A48F98000278F8C /* XMUsersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMUsersTableView.h; sourceTree = "<group>"; };
 		166142401A48F98000278F8C /* XMUsersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMUsersTableView.m; sourceTree = "<group>"; };
 		166142491A496BDA00278F8C /* XMUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMUsersTableViewController.h; sourceTree = "<group>"; };
@@ -253,6 +261,33 @@
 				161C5EBA1A513C030095679B /* XMMailController.m */,
 			);
 			path = XMContainerViewController;
+			sourceTree = "<group>";
+		};
+		161C5EC71A5288BE0095679B /* XMOrders */ = {
+			isa = PBXGroup;
+			children = (
+				161C5ECD1A5289000095679B /* XMOrdersCell */,
+				161C5EC81A5288DF0095679B /* XMOrdersTableView */,
+			);
+			path = XMOrders;
+			sourceTree = "<group>";
+		};
+		161C5EC81A5288DF0095679B /* XMOrdersTableView */ = {
+			isa = PBXGroup;
+			children = (
+				161C5EC91A5288DF0095679B /* XMOrdersViewController.h */,
+				161C5ECA1A5288DF0095679B /* XMOrdersViewController.m */,
+			);
+			path = XMOrdersTableView;
+			sourceTree = "<group>";
+		};
+		161C5ECD1A5289000095679B /* XMOrdersCell */ = {
+			isa = PBXGroup;
+			children = (
+				161C5ECE1A5289000095679B /* XMOrdersCell.h */,
+				161C5ECF1A5289000095679B /* XMOrdersCell.m */,
+			);
+			path = XMOrdersCell;
 			sourceTree = "<group>";
 		};
 		1661423E1A48F96800278F8C /* XMUsersTableView */ = {
@@ -421,6 +456,7 @@
 		16D595811A411380004BEF29 /* XMCustomViewController */ = {
 			isa = PBXGroup;
 			children = (
+				161C5EC71A5288BE0095679B /* XMOrders */,
 				161C5EB81A513BDC0095679B /* XMContainerViewController */,
 				166142861A4A5AC800278F8C /* XMTableViewController */,
 				1661427D1A4A4E3D00278F8C /* XMBarButtonItem */,
@@ -674,11 +710,13 @@
 				166142541A496BEA00278F8C /* XMTabBarController.h in Headers */,
 				166142891A4A5AD300278F8C /* XMTableViewController.h in Headers */,
 				1661425F1A4986E100278F8C /* XMMessageModel.h in Headers */,
+				161C5ED01A5289000095679B /* XMOrdersCell.h in Headers */,
 				16D595E11A411A6E004BEF29 /* XMCustomViewController.h in Headers */,
 				166142801A4A4E3D00278F8C /* XMBarButtonItem.h in Headers */,
 				1661424B1A496BDA00278F8C /* XMUsersTableViewController.h in Headers */,
 				166142591A4983F400278F8C /* XMViewController.h in Headers */,
 				161C5EBB1A513C030095679B /* XMMailController.h in Headers */,
+				161C5ECB1A5288DF0095679B /* XMOrdersViewController.h in Headers */,
 				16D595E21A411A6E004BEF29 /* XMGuideViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,9 +946,11 @@
 				166142551A496BEA00278F8C /* XMTabBarController.m in Sources */,
 				166142811A4A4E3D00278F8C /* XMBarButtonItem.m in Sources */,
 				16D595C71A41140F004BEF29 /* XMGuideViewController.m in Sources */,
+				161C5ED11A5289000095679B /* XMOrdersCell.m in Sources */,
 				166142531A496BEA00278F8C /* XMItemButton.m in Sources */,
 				1661425A1A4983F400278F8C /* XMViewController.m in Sources */,
 				1661428A1A4A5AD300278F8C /* XMTableViewController.m in Sources */,
+				161C5ECC1A5288DF0095679B /* XMOrdersViewController.m in Sources */,
 				1661424C1A496BDA00278F8C /* XMUsersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
