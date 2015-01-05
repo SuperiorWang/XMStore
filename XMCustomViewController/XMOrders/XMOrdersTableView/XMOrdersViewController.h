@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMOrdersCell.h"
 
-@interface XMOrdersViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface XMOrdersViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
