@@ -24,6 +24,7 @@
 @property (assign,nonatomic) XMAreaValue       areaValue;
 @property (assign,nonatomic) NSString          *data;//省市区的字符串
 
+@property (assign,nonatomic) CGFloat           offsetY; //TextField Y轴偏移量
 @property (weak,  nonatomic) UITextField       *currentTextField;//当前的TextField;
 @property (assign,nonatomic) CGSize            keyboardSize;//键盘的高度
 @property (weak,  nonatomic) XMKeyboardToolBar *tool;
@@ -199,30 +200,53 @@
 #ifdef DEBUG
     NSLog(@"text Field ShouldBeginEditing");
 #endif
-//    if (CGRectGetMaxY(textField.frame) > ([UIScreen mainScreen].bounds.size.height - self.keyboardSize.height)){
-//        //计算该上移的距离
-//        CGFloat offsetY = CGRectGetMaxY(textField.frame) + self.keyboardSize.height - [UIScreen mainScreen].bounds.size.height;
-//        
-//        CGRect frame = self.scrollView.frame;
-//        frame.size.height -= offsetY;
-//        self.scrollView.frame = frame;
-//    
-//        //滚动到当前文本
-//        CGRect textFieldRect = [textField frame];
-//        [self.scrollView scrollRectToVisible:textFieldRect animated:YES];
-//        
-//        keyboardVisible = YES;
-//    }
     
     self.tool = [XMKeyboardToolBar keyboardTool];
     self.tool.backgroundColor = [UIColor clearColor];
     self.tool.barTintColor = [UIColor lightGrayColor];
     
-    self.tool.delegate = self;
+    self.tool.toolDelegate = self;
     
     textField.inputAccessoryView = self.tool;
     
     self.currentTextField = textField;
+    
+    if (keyboardVisible) {  //如果键盘打开
+        //获取textField的Y坐标
+        UIWindow *window = [[[UIApplication sharedApplication]delegate]window];
+        CGFloat textFieldY = [textField convertRect:textField.bounds toView:window].origin.y;
+        CGFloat textFieldH = [textField convertRect:textField.bounds toView:window].size.height;
+        
+        //获取NavigationBar的Bottom Y坐标
+        CGFloat navigationY = CGRectGetMaxY(self.navigationController.navigationBar.frame);  //64.0
+        
+        if (textFieldY < navigationY) {
+            CGFloat offsetDel = navigationY - textFieldY;
+            self.offsetY -= offsetDel;
+            
+            for (NSLayoutConstraint *constraint in self.scrollView.superview.constraints) {
+                if (constraint.firstItem == self.scrollView && constraint.firstAttribute == NSLayoutAttributeTop) {
+                    [UIView animateWithDuration:0.4 animations:^{
+                        constraint.constant += offsetDel;
+                        [self.view layoutIfNeeded];
+                    }];
+                }
+            }
+        }else if (textFieldY + textFieldH > [UIScreen mainScreen].bounds.size.height - self.keyboardSize.height) {
+            CGFloat offsetDel = textFieldY + textFieldH - [UIScreen mainScreen].bounds.size.height + self.keyboardSize.height;
+            self.offsetY += offsetDel;
+            
+            for (NSLayoutConstraint *constraint in self.scrollView.superview.constraints) {
+                if (constraint.firstItem == self.scrollView && constraint.firstAttribute == NSLayoutAttributeTop) {
+                    [UIView animateWithDuration:0.4 animations:^{
+                        constraint.constant -= offsetDel;
+                        [self.view layoutIfNeeded];
+                    }];
+                }
+            }
+        }
+        
+    }
     return YES;
 }
 
@@ -247,23 +271,16 @@
     
     if (CGRectGetMaxY(self.currentTextField.frame) > ([UIScreen mainScreen].bounds.size.height - self.keyboardSize.height)){
         //计算该上移的距离
-        CGFloat offsetY = CGRectGetMaxY(self.currentTextField.frame) + self.keyboardSize.height - [UIScreen mainScreen].bounds.size.height;
-        
-//        CGRect frame = self.scrollView.frame;
-//        frame.size.height -= offsetY;
-//        self.scrollView.frame = frame;
+        self.offsetY = CGRectGetMaxY(self.currentTextField.frame) + self.keyboardSize.height - [UIScreen mainScreen].bounds.size.height;
         
         for (NSLayoutConstraint *constraint in self.scrollView.superview.constraints) {
-            if (constraint.firstItem == self.scrollView && constraint.firstAttribute == NSLayoutAttributeBottom) {
-                [UIView animateWithDuration:0.7 animations:^{
-                    constraint.constant += 100;
+            if (constraint.firstItem == self.scrollView && constraint.firstAttribute == NSLayoutAttributeTop) {
+                [UIView animateWithDuration:0.4 animations:^{
+                    constraint.constant -= self.offsetY;
                     [self.view layoutIfNeeded];
                 }];
             }
         }
-        //滚动到当前文本
-        CGRect textFieldRect = [self.currentTextField frame];
-        [self.scrollView scrollRectToVisible:textFieldRect animated:YES];
         
         keyboardVisible = YES;
     }
@@ -272,17 +289,37 @@
 
 - (void)keyboardDidHide:(NSNotification*)notif
 {
+#ifdef DEBUG
+    NSLog(@"key board Did Hide");
+#endif
     
+    [UIView animateWithDuration:0.5 animations:^{
+        for (NSLayoutConstraint *constraint in self.scrollView.superview.constraints) {
+            if (constraint.firstItem == self.scrollView && constraint.firstAttribute == NSLayoutAttributeTop) {
+                constraint.constant += self.offsetY;
+                [self.view layoutIfNeeded];
+            }
+        }
+    }completion:^(BOOL finished) {
+        self.offsetY = 0;
+    }];
 }
 
 - (void)keyboardTool:(XMKeyboardToolBar *)tool buttonType:(KeyboardToolButtonType)type
 {
     switch (type) {
         case kKeyboardToolButtonTypeDone:{
-            
+#ifdef DEBUG
+            NSLog(@"点击完成按钮");
+#endif
+            [self.currentTextField resignFirstResponder];
             break;
         }
         case kKeyboardToolButtonTypeCannel:{
+#ifdef DEBUG
+            NSLog(@"点击取消按钮");
+#endif
+            [self.currentTextField resignFirstResponder];
             break;
         }
             

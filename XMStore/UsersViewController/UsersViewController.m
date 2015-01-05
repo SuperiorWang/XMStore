@@ -14,5 +14,9 @@
 {
     [super viewDidLoad];
     self.tableView.rowHeight = 44.0f;
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController.navigationBar setBackIndicatorImage:[[UIImage imageNamed:@"BackIndicatorImage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[[UIImage imageNamed:@"BackIndicatorImage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 @end

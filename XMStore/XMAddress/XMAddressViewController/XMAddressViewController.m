@@ -56,4 +56,9 @@
     return cell;
 }
 
+- (IBAction)cannelModelView:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
 @end

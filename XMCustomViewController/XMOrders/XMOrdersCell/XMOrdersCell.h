@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XMOrdersCell : UITableViewCell
+@protocol XMOrdersCellDelegate <NSObject>
+
+- (void)tableViewDidBeginCoordinate:(id)_ withKeyboardHeight:(CGSize)keyboardHeight; // 开始重新对UITableView排列Cell
+- (void)tableVIewDidEndCoordinate:(id)_ withKeyboardHeight:(CGSize)keyboardHeight;   // 回复Cell
+@end
+
+@interface XMOrdersCell : UITableViewCell<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
@@ -19,5 +25,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cannelOrders;
 @property (weak, nonatomic) IBOutlet UILabel *payState;
 @property (weak, nonatomic) IBOutlet UIButton *redButton;
+
+@property (weak, nonatomic) id<XMOrdersCellDelegate> ordersDelegate;
 
 @end

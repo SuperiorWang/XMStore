@@ -2392,6 +2392,9 @@
                     <navigationItem key="navigationItem" title="管理收货地址" id="a3N-6C-pwy">
                         <barButtonItem key="leftBarButtonItem" title="取消" id="EuD-wZ-UrO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cannelModelView:" destination="JIG-a1-qp6" id="Ie9-GA-6G1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -2429,7 +2432,7 @@
                                                 <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WK9-G6-6hU">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="111000" contentMode="scaleToFill" restorationIdentifier="111000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WK9-G6-6hU">
                                                 <rect key="frame" x="67" y="0.0" width="513" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Umi-UC-Pn2"/>
