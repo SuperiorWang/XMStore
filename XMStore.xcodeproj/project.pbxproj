@@ -14,6 +14,8 @@
 		161C5ECC1A5288DF0095679B /* XMOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5ECA1A5288DF0095679B /* XMOrdersViewController.m */; };
 		161C5ED01A5289000095679B /* XMOrdersCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 161C5ECE1A5289000095679B /* XMOrdersCell.h */; };
 		161C5ED11A5289000095679B /* XMOrdersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C5ECF1A5289000095679B /* XMOrdersCell.m */; };
+		163DC5E61A53F10100173A19 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163DC5E51A53F10100173A19 /* area.plist */; };
+		163DC5EA1A53F1C500173A19 /* XMAddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163DC5E91A53F1C500173A19 /* XMAddAddressViewController.m */; };
 		166142411A48F98000278F8C /* XMUsersTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1661423F1A48F98000278F8C /* XMUsersTableView.h */; };
 		166142421A48F98000278F8C /* XMUsersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 166142401A48F98000278F8C /* XMUsersTableView.m */; };
 		1661424B1A496BDA00278F8C /* XMUsersTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 166142491A496BDA00278F8C /* XMUsersTableViewController.h */; };
@@ -31,7 +33,11 @@
 		166142891A4A5AD300278F8C /* XMTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 166142871A4A5AD300278F8C /* XMTableViewController.h */; };
 		1661428A1A4A5AD300278F8C /* XMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166142881A4A5AD300278F8C /* XMTableViewController.m */; };
 		1661428F1A4A60EB00278F8C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1661428E1A4A60EB00278F8C /* LoginViewController.m */; };
+		16654A391A594EED00F04F56 /* KeyboardTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16654A361A594EED00F04F56 /* KeyboardTool.xib */; };
+		16654A3A1A594EED00F04F56 /* XMKeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 16654A381A594EED00F04F56 /* XMKeyboardToolBar.m */; };
 		16733C1C1A4D2AFF0042C6DC /* ShoppingCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16733C1B1A4D2AFF0042C6DC /* ShoppingCarCell.m */; };
+		16A04AFD1A5392DB00768A58 /* XMAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A04AFC1A5392DB00768A58 /* XMAddressTableViewCell.m */; };
+		16A04B011A53958C00768A58 /* XMAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A04B001A53958C00768A58 /* XMAddressViewController.m */; };
 		16B3D85B1A50EDED00C2EE42 /* SearchProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B3D85A1A50EDED00C2EE42 /* SearchProductViewController.m */; };
 		16D594E31A40132B004BEF29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D594E21A40132B004BEF29 /* main.m */; };
 		16D594EF1A40132B004BEF29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D594ED1A40132B004BEF29 /* Main.storyboard */; };
@@ -127,6 +133,9 @@
 		161C5ECA1A5288DF0095679B /* XMOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMOrdersViewController.m; sourceTree = "<group>"; };
 		161C5ECE1A5289000095679B /* XMOrdersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMOrdersCell.h; sourceTree = "<group>"; };
 		161C5ECF1A5289000095679B /* XMOrdersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMOrdersCell.m; sourceTree = "<group>"; };
+		163DC5E51A53F10100173A19 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		163DC5E81A53F1C500173A19 /* XMAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMAddAddressViewController.h; sourceTree = "<group>"; };
+		163DC5E91A53F1C500173A19 /* XMAddAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAddAddressViewController.m; sourceTree = "<group>"; };
 		1661423F1A48F98000278F8C /* XMUsersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMUsersTableView.h; sourceTree = "<group>"; };
 		166142401A48F98000278F8C /* XMUsersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMUsersTableView.m; sourceTree = "<group>"; };
 		166142491A496BDA00278F8C /* XMUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMUsersTableViewController.h; sourceTree = "<group>"; };
@@ -145,8 +154,15 @@
 		166142881A4A5AD300278F8C /* XMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTableViewController.m; sourceTree = "<group>"; };
 		1661428D1A4A60EB00278F8C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1661428E1A4A60EB00278F8C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		16654A361A594EED00F04F56 /* KeyboardTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardTool.xib; sourceTree = "<group>"; };
+		16654A371A594EED00F04F56 /* XMKeyboardToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMKeyboardToolBar.h; sourceTree = "<group>"; };
+		16654A381A594EED00F04F56 /* XMKeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMKeyboardToolBar.m; sourceTree = "<group>"; };
 		16733C1A1A4D2AFF0042C6DC /* ShoppingCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarCell.h; sourceTree = "<group>"; };
 		16733C1B1A4D2AFF0042C6DC /* ShoppingCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarCell.m; sourceTree = "<group>"; };
+		16A04AFB1A5392DB00768A58 /* XMAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMAddressTableViewCell.h; sourceTree = "<group>"; };
+		16A04AFC1A5392DB00768A58 /* XMAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAddressTableViewCell.m; sourceTree = "<group>"; };
+		16A04AFF1A53958C00768A58 /* XMAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMAddressViewController.h; sourceTree = "<group>"; };
+		16A04B001A53958C00768A58 /* XMAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAddressViewController.m; sourceTree = "<group>"; };
 		16B3D8591A50EDED00C2EE42 /* SearchProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProductViewController.h; sourceTree = "<group>"; };
 		16B3D85A1A50EDED00C2EE42 /* SearchProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchProductViewController.m; sourceTree = "<group>"; };
 		16D594DD1A40132B004BEF29 /* XMStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +306,15 @@
 			path = XMOrdersCell;
 			sourceTree = "<group>";
 		};
+		163DC5E71A53F1A800173A19 /* XMAddAddressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				163DC5E81A53F1C500173A19 /* XMAddAddressViewController.h */,
+				163DC5E91A53F1C500173A19 /* XMAddAddressViewController.m */,
+			);
+			path = XMAddAddressViewController;
+			sourceTree = "<group>";
+		};
 		1661423E1A48F96800278F8C /* XMUsersTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +406,44 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
+		16654A351A594EED00F04F56 /* XMKeyboardToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				16654A361A594EED00F04F56 /* KeyboardTool.xib */,
+				16654A371A594EED00F04F56 /* XMKeyboardToolBar.h */,
+				16654A381A594EED00F04F56 /* XMKeyboardToolBar.m */,
+			);
+			path = XMKeyboardToolBar;
+			sourceTree = "<group>";
+		};
+		16A04AF91A5392B500768A58 /* XMAddress */ = {
+			isa = PBXGroup;
+			children = (
+				163DC5E71A53F1A800173A19 /* XMAddAddressViewController */,
+				16A04AFE1A53958000768A58 /* XMAddressViewController */,
+				16A04AFA1A5392CD00768A58 /* XMAddressTableViewCell */,
+			);
+			path = XMAddress;
+			sourceTree = "<group>";
+		};
+		16A04AFA1A5392CD00768A58 /* XMAddressTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				16A04AFB1A5392DB00768A58 /* XMAddressTableViewCell.h */,
+				16A04AFC1A5392DB00768A58 /* XMAddressTableViewCell.m */,
+			);
+			path = XMAddressTableViewCell;
+			sourceTree = "<group>";
+		};
+		16A04AFE1A53958000768A58 /* XMAddressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16A04AFF1A53958C00768A58 /* XMAddressViewController.h */,
+				16A04B001A53958C00768A58 /* XMAddressViewController.m */,
+			);
+			path = XMAddressViewController;
+			sourceTree = "<group>";
+		};
 		16B3D8581A50EDD800C2EE42 /* SearchProductViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +480,8 @@
 		16D594DF1A40132B004BEF29 /* XMStore */ = {
 			isa = PBXGroup;
 			children = (
+				16654A351A594EED00F04F56 /* XMKeyboardToolBar */,
+				16A04AF91A5392B500768A58 /* XMAddress */,
 				16B3D8581A50EDD800C2EE42 /* SearchProductViewController */,
 				1661428B1A4A60BB00278F8C /* LoginAndRegister */,
 				16EFA7471A47C25F005B10C5 /* MessageViewController */,
@@ -441,6 +506,7 @@
 				16D5957A1A410DD0004BEF29 /* Images */,
 				16D594E11A40132B004BEF29 /* Info.plist */,
 				16D594E21A40132B004BEF29 /* main.m */,
+				163DC5E51A53F10100173A19 /* area.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -846,12 +912,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EFA6F81A42688D005B10C5 /* Settings.bundle in Resources */,
+				163DC5E61A53F10100173A19 /* area.plist in Resources */,
 				16D595D71A411607004BEF29 /* 欢2.png in Resources */,
 				16D595D61A411607004BEF29 /* 欢1.png in Resources */,
 				16D595D91A411607004BEF29 /* 欢4新.png in Resources */,
 				16D594EF1A40132B004BEF29 /* Main.storyboard in Resources */,
 				16D594F41A40132B004BEF29 /* LaunchScreen.xib in Resources */,
 				16D595D81A411607004BEF29 /* 欢3.png in Resources */,
+				16654A391A594EED00F04F56 /* KeyboardTool.xib in Resources */,
 				16D594F11A40132B004BEF29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,6 +986,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A04B011A53958C00768A58 /* XMAddressViewController.m in Sources */,
 				16EFA6F01A4174E9005B10C5 /* CoreDataDAO.m in Sources */,
 				16EFA74A1A47C26C005B10C5 /* MessageViewController.m in Sources */,
 				1661428F1A4A60EB00278F8C /* LoginViewController.m in Sources */,
@@ -928,8 +997,11 @@
 				16D595E61A411C47004BEF29 /* XMHomeViewController.m in Sources */,
 				16B3D85B1A50EDED00C2EE42 /* SearchProductViewController.m in Sources */,
 				16EFA6EC1A416E06005B10C5 /* NoteManagedObject.m in Sources */,
+				16654A3A1A594EED00F04F56 /* XMKeyboardToolBar.m in Sources */,
 				16EFA74D1A47C27A005B10C5 /* ShoppingCarViewController.m in Sources */,
+				16A04AFD1A5392DB00768A58 /* XMAddressTableViewCell.m in Sources */,
 				16EFA7411A47C1C4005B10C5 /* ClassificationViewController.m in Sources */,
+				163DC5EA1A53F1C500173A19 /* XMAddAddressViewController.m in Sources */,
 				16EFA6ED1A416E06005B10C5 /* XMStore.xcdatamodeld in Sources */,
 				16D594E31A40132B004BEF29 /* main.m in Sources */,
 				16EFA6F61A417AE2005B10C5 /* Note.m in Sources */,
@@ -1038,7 +1110,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1074,7 +1146,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

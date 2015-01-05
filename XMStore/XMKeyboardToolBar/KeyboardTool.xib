@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kf6-bY-6ef" customClass="XMKeyboardToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="取消" id="9e2-UQ-02I">
+                    <connections>
+                        <action selector="cannelBtnClick:" destination="kf6-bY-6ef" id="Omf-TU-pxp"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="Uvb-rQ-xZj"/>
+                <barButtonItem title="完成" id="9jZ-cD-mM7">
+                    <connections>
+                        <action selector="doneBtnClick:" destination="kf6-bY-6ef" id="lCE-aa-8AW"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <connections>
+                <outlet property="cannelButton" destination="9e2-UQ-02I" id="WXE-Gc-ALu"/>
+                <outlet property="doneButton" destination="9jZ-cD-mM7" id="S6R-cc-WWI"/>
+            </connections>
+            <point key="canvasLocation" x="641" y="140"/>
+        </toolbar>
+    </objects>
+</document>

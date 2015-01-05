@@ -35,8 +35,11 @@
     
     _webView.XMdelegate = self;
     
-//    [self followScrollView:_webView];
-    
+    if ([[UIDevice currentDevice].systemVersion doubleValue]>= 7.0) {
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationController.navigationBar setBackIndicatorImage:[[UIImage imageNamed:@"BackIndicatorImage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[[UIImage imageNamed:@"BackIndicatorImage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ]];
+    }
 }
 
 - (void)loadPage
