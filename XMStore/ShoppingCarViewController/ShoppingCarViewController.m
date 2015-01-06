@@ -14,7 +14,8 @@
 @interface ShoppingCarViewController()<EGORefreshTableHeaderDelegate,SwipeableCellDelegate>
 {
     EGORefreshTableHeaderView * _refreshHeaderView;
-    BOOL _reloading;
+    BOOL                        _reloading;
+    CGPoint                     offset;
 }
 
 @property (nonatomic,strong) NSMutableSet *cellsCurrentlyEditing;
@@ -56,6 +57,7 @@
     [cell addSubview:view];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.productNumber.delegate = self;
     cell.delegate = self;
     
     [cell.selectedButton addTarget:self action:@selector(selectedProduct:) forControlEvents:UIControlEventTouchUpInside];
@@ -78,5 +80,37 @@
 
 - (void)cellDidClose:(UITableViewCell *)cell {
     [self.cellsCurrentlyEditing removeObject:[self.table indexPathForCell:cell]];
+}
+
+#pragma mark - 处理键盘事件
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    //计算偏移量
+    UIWindow *window = [[[UIApplication sharedApplication]delegate]window];
+    
+    ShoppingCarCell  *currentCell ;
+    currentCell = (ShoppingCarCell*)textField.superview.superview.superview;
+    
+    CGRect currentCellRect =  [currentCell convertRect:currentCell.bounds toView:window];
+    offset = self.table.contentOffset;
+    
+    CGFloat offsetY;
+    offsetY = currentCellRect.origin.y - CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.table setContentOffset:CGPointMake(0, offset.y + offsetY)];
+    } completion:^(BOOL finished) {
+        self.table.scrollEnabled = false;
+    }];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+#ifdef DEBUG
+    NSLog(@"text Field Did End Editing");
+#endif
+    
+    [self.table setContentOffset:CGPointMake(0, offset.y) animated:YES];
+    self.table.scrollEnabled = true;
 }
 @end

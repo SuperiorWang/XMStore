@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "XMViewController.h"
 
-@interface ShoppingCarViewController :XMViewController<UITableViewDelegate,UITableViewDataSource>
+@interface ShoppingCarViewController :XMViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (nonatomic,assign) int dataNumber;
+
 @end
