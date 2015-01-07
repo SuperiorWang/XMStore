@@ -38,6 +38,8 @@
 		16733C1C1A4D2AFF0042C6DC /* ShoppingCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16733C1B1A4D2AFF0042C6DC /* ShoppingCarCell.m */; };
 		16A04AFD1A5392DB00768A58 /* XMAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A04AFC1A5392DB00768A58 /* XMAddressTableViewCell.m */; };
 		16A04B011A53958C00768A58 /* XMAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A04B001A53958C00768A58 /* XMAddressViewController.m */; };
+		16A8B0071A5CC5C40069C659 /* XMPhoneNumberRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A8B0061A5CC5C40069C659 /* XMPhoneNumberRegisterController.m */; };
+		16A8B00B1A5CC6390069C659 /* XMMailRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A8B00A1A5CC6390069C659 /* XMMailRegisterController.m */; };
 		16B3D85B1A50EDED00C2EE42 /* SearchProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B3D85A1A50EDED00C2EE42 /* SearchProductViewController.m */; };
 		16D594E31A40132B004BEF29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D594E21A40132B004BEF29 /* main.m */; };
 		16D594EF1A40132B004BEF29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D594ED1A40132B004BEF29 /* Main.storyboard */; };
@@ -163,6 +165,10 @@
 		16A04AFC1A5392DB00768A58 /* XMAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAddressTableViewCell.m; sourceTree = "<group>"; };
 		16A04AFF1A53958C00768A58 /* XMAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMAddressViewController.h; sourceTree = "<group>"; };
 		16A04B001A53958C00768A58 /* XMAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAddressViewController.m; sourceTree = "<group>"; };
+		16A8B0051A5CC5C40069C659 /* XMPhoneNumberRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPhoneNumberRegisterController.h; sourceTree = "<group>"; };
+		16A8B0061A5CC5C40069C659 /* XMPhoneNumberRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPhoneNumberRegisterController.m; sourceTree = "<group>"; };
+		16A8B0091A5CC6390069C659 /* XMMailRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMailRegisterController.h; sourceTree = "<group>"; };
+		16A8B00A1A5CC6390069C659 /* XMMailRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMailRegisterController.m; sourceTree = "<group>"; };
 		16B3D8591A50EDED00C2EE42 /* SearchProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProductViewController.h; sourceTree = "<group>"; };
 		16B3D85A1A50EDED00C2EE42 /* SearchProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchProductViewController.m; sourceTree = "<group>"; };
 		16D594DD1A40132B004BEF29 /* XMStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,6 +397,7 @@
 		1661428B1A4A60BB00278F8C /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				16A8B0031A5CC58C0069C659 /* RegisterController */,
 				161C5EB41A5136EF0095679B /* FindBackPsdController */,
 				1661428C1A4A60D200278F8C /* LoginViewController */,
 			);
@@ -442,6 +449,33 @@
 				16A04B001A53958C00768A58 /* XMAddressViewController.m */,
 			);
 			path = XMAddressViewController;
+			sourceTree = "<group>";
+		};
+		16A8B0031A5CC58C0069C659 /* RegisterController */ = {
+			isa = PBXGroup;
+			children = (
+				16A8B0081A5CC6250069C659 /* MailRegister */,
+				16A8B0041A5CC5A00069C659 /* PhoneNumberRegister */,
+			);
+			path = RegisterController;
+			sourceTree = "<group>";
+		};
+		16A8B0041A5CC5A00069C659 /* PhoneNumberRegister */ = {
+			isa = PBXGroup;
+			children = (
+				16A8B0051A5CC5C40069C659 /* XMPhoneNumberRegisterController.h */,
+				16A8B0061A5CC5C40069C659 /* XMPhoneNumberRegisterController.m */,
+			);
+			path = PhoneNumberRegister;
+			sourceTree = "<group>";
+		};
+		16A8B0081A5CC6250069C659 /* MailRegister */ = {
+			isa = PBXGroup;
+			children = (
+				16A8B0091A5CC6390069C659 /* XMMailRegisterController.h */,
+				16A8B00A1A5CC6390069C659 /* XMMailRegisterController.m */,
+			);
+			path = MailRegister;
 			sourceTree = "<group>";
 		};
 		16B3D8581A50EDD800C2EE42 /* SearchProductViewController */ = {
@@ -995,6 +1029,7 @@
 				16D595DD1A411930004BEF29 /* AppDelegate.m in Sources */,
 				16EFA6F31A4177D2005B10C5 /* NoteDAO.m in Sources */,
 				16D595E61A411C47004BEF29 /* XMHomeViewController.m in Sources */,
+				16A8B0071A5CC5C40069C659 /* XMPhoneNumberRegisterController.m in Sources */,
 				16B3D85B1A50EDED00C2EE42 /* SearchProductViewController.m in Sources */,
 				16EFA6EC1A416E06005B10C5 /* NoteManagedObject.m in Sources */,
 				16654A3A1A594EED00F04F56 /* XMKeyboardToolBar.m in Sources */,
@@ -1005,6 +1040,7 @@
 				16EFA6ED1A416E06005B10C5 /* XMStore.xcdatamodeld in Sources */,
 				16D594E31A40132B004BEF29 /* main.m in Sources */,
 				16EFA6F61A417AE2005B10C5 /* Note.m in Sources */,
+				16A8B00B1A5CC6390069C659 /* XMMailRegisterController.m in Sources */,
 				161C5EB71A5136FC0095679B /* FindBackPsdController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

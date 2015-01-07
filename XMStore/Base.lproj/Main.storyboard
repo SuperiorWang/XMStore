@@ -1050,7 +1050,7 @@
         <!--手机号注册-->
         <scene sceneID="eKV-NC-OaV">
             <objects>
-                <viewController id="Pzz-pb-L0c" sceneMemberID="viewController">
+                <viewController id="Pzz-pb-L0c" customClass="XMPhoneNumberRegisterController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rbr-Ur-3do"/>
                         <viewControllerLayoutGuide type="bottom" id="Zfb-v3-nlQ"/>
@@ -1062,7 +1062,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-uk-gGm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwi-WG-Ixk" userLabel="手机号">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwi-WG-Ixk" userLabel="手机号">
                                         <rect key="frame" x="0.0" y="-30" width="600" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38d-Ts-rLg">
@@ -1071,10 +1071,13 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rCx-QK-SGt">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rCx-QK-SGt">
                                                 <rect key="frame" x="10" y="0.0" width="480" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Pzz-pb-L0c" id="LeD-f1-pMV"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1097,10 +1100,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmD-6U-XPH" userLabel="验证码">
                                         <rect key="frame" x="0.0" y="16" width="600" height="36"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="REo-t1-6By">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="REo-t1-6By">
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Pzz-pb-L0c" id="zKL-Bu-1U0"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1125,6 +1131,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Pzz-pb-L0c" id="Yho-NL-Ncn"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1147,6 +1156,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Pzz-pb-L0c" id="01T-D4-jPG"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1169,6 +1181,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Pzz-pb-L0c" id="C9q-0D-N6m"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1261,6 +1276,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="手机号注册" id="80K-LE-JKx"/>
+                    <connections>
+                        <outlet property="button" destination="tSd-Jp-zv4" id="H2c-hf-e10"/>
+                        <outlet property="scrollView" destination="4PO-uk-gGm" id="U8D-gO-uMd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItI-ch-gnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1269,7 +1288,7 @@
         <!--邮箱注册-->
         <scene sceneID="RfQ-Uw-4co">
             <objects>
-                <viewController id="Q7G-rq-vdr" sceneMemberID="viewController">
+                <viewController id="Q7G-rq-vdr" customClass="XMMailRegisterController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KGu-zY-j74"/>
                         <viewControllerLayoutGuide type="bottom" id="P4v-Ke-bPg"/>
@@ -1288,6 +1307,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="480" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Q7G-rq-vdr" id="IsH-jc-mul"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXL-eR-YcK">
                                                 <rect key="frame" x="495" y="0.0" width="95" height="36"/>
@@ -1320,6 +1342,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Q7G-rq-vdr" id="tzu-Ls-jIx"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1342,6 +1367,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Q7G-rq-vdr" id="Ask-iE-rBJ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1364,6 +1392,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Q7G-rq-vdr" id="hlG-CG-cHN"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1386,6 +1417,9 @@
                                                 <rect key="frame" x="10" y="0.0" width="580" height="36"/>
                                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Q7G-rq-vdr" id="1U3-Du-Fo6"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1498,6 +1532,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="邮箱注册" id="fkE-lF-jQr"/>
+                    <connections>
+                        <outlet property="scrollView" destination="UuL-hd-R2q" id="8ce-pB-IZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljx-iD-45h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
